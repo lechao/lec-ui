@@ -1,16 +1,16 @@
 <template>
-  <span :endTime="endTime" :callback="callback" :endText="endText" :showType="showType" >
-    <slot>
-    </slot>
-  </span>
+  <button type="button" class="btn" :class="type">
+    <slot></slot>
+  </button>
 </template>
+
 <script>
   export default {
-    name: 'LeCountdown',
+    name: 'LeButton',
     props: {
-      endTime: {
+      type: {
         type: String,
-        default: ''
+        default: 'btn-primary'
       },
       endText: {
         type: String,
@@ -88,4 +88,6 @@
   };
 </script>
 
-<style></style>
+<style scoped>
+
+</style>
